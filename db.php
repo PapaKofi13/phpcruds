@@ -17,7 +17,7 @@ class Connection
     {
         $this->serverName = "localhost";
         $this->userName = "root";
-        $this->password = "root";
+        $this->password = "";
         $this->dbName = "mickey";
         $this->charset = "utf8mb4";
 
@@ -29,7 +29,7 @@ class Connection
             $pdo->query("use $this->dbName");
             return $pdo;
         } catch (PDOException $e) {
-            echo "Connection failed" . $e->getMessage();
+            echo "Connection failed " . $e->getMessage();
         }
     }
 }

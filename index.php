@@ -20,15 +20,18 @@ require './userHandler.php';
             padding-top: 20px;
             margin-bottom: 40px;
             text-align: center;
+        
         }
 
         .form_container2 {
             text-align: center;
             width: 60%;
-            height: 400px;
+            min-height: 400px;
             margin: auto;
             background-color: grey;
             padding-top: 20px;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
         }
 
         input {
@@ -54,7 +57,6 @@ require './userHandler.php';
             <input type="password" name="password" placeholder="Password">
             <input type="submit" value="Register" name="submit">
         </form>
-
     </div>
     <!-- LOGIN FORM -->
     <div class="form_container2">
@@ -65,34 +67,32 @@ require './userHandler.php';
             <input type="submit" value="Login" name="submit_login">
         </form>
     </div>
-</body>
 
-<div class="form_container2">
-    <h2>Add Report</h2>
-    <form action="<?= $_SERVER["PHP_SELF"]; ?>" method="post">
-        <input type="text" name="id" placeholder="VolumeID">
-        <input type="text" name="Report_id" placeholder="Report_id">
-        <input type="text" name="Report_title" placeholder="Report_title">
-        <input type="text" name="Report_summary" placeholder="Report_summary">
-        <input type="text" name="Report_highlights" placeholder="Report_highlights">
-        <input type="text" name="Report_this_issue" placeholder="Report_this_issue">
-        <input type="text" name="Report_date" placeholder="Report_date">
-        <input type="text" name="Report_description" placeholder="Report_description">
-        <input type="text" name="Report_authors" placeholder="Report_authors">
-        <input type="submit" value="Add" name="add_report">
-    </form>
-</div>
 
-<div class="form_container2">
-    <h2>Add Volume</h2>
-    <form action="<?= $_SERVER["PHP_SELF"]; ?>" method="post">
-        <input type="text" name="Volume_id" placeholder="Volume_id">
-        <input type="text" name="Volume_title" placeholder="Volume_title">
-        <input type="text" name="Volume_year" placeholder="Volume_year">
-        <input type="text" name="Volume_description" placeholder="Volume_description">
-        <input type="submit" value="Add" name="add_volume">
-    </form>
-</div>
+    <div class="form_container2">
+        <h2>Add Report</h2>
+        <form action="<?= $_SERVER["PHP_SELF"]; ?>" method="post">
+            <input type="text" name="volume_id" placeholder="VolumeID">
+            <input type="text" name="report_title" placeholder="Report_title">
+            <input type="text" name="report_summary" placeholder="Report_summary">
+            <input type="text" name="report_highlights" placeholder="Report_highlights">
+            <input type="text" name="report_this_issue" placeholder="Report_this_issue">
+            <input type="text" name="report_date" placeholder="Report_date">
+            <input type="text" name="report_description" placeholder="Report_description">
+            <input type="text" name="report_authors" placeholder="Report_authors">
+            <input type="submit" value="Add" name="add_report">
+        </form>
+    </div>
+
+    <div class="form_container2">
+        <h2>Add Volume</h2>
+        <form action="<?= $_SERVER["PHP_SELF"]; ?>" method="post">
+            <input type="text" name="volume_title" placeholder="Volume_title">
+            <input type="text" name="volume_year" placeholder="Volume_year">
+            <input type="text" name="volume_description" placeholder="Volume_description">
+            <input type="submit" value="Add" name="add_volume">
+        </form>
+    </div>
 
 </body>
 
